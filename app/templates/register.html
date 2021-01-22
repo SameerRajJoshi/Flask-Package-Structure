@@ -1,0 +1,31 @@
+{% extends "layout.html" %}
+
+{% block content %}
+<h1> <strong> Register </strong> </h1>
+<form action="" method="POST">
+    {{ form.hidden_tag() }}
+    <p>
+        {{ form.email.label }}
+        {{ form.email }}
+    </p>
+    <p>
+        {{ form.username.label }}
+        {{ form.username(size=32) }}
+    </p>
+    <p>
+        {{ form.password.label }}
+        {{ form.password }}
+    </p>
+    <p>
+        {{ form.confirm_password.label }}
+        {{ form.confirm_password }}
+    </p>
+    <p>
+        {{ form.accept_tos() }}
+        {{ form.accept_tos.label }}
+    </p>
+    <p>
+        {{ form.submit() }}
+    </p>
+</form>
+{% endblock %}

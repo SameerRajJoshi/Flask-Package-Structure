@@ -1,0 +1,23 @@
+{% extends "layout.html" %}
+
+{% block content %}
+<h1> <strong> Log In </strong> </h1>
+<form action="" method="POST">
+    {{ form.hidden_tag() }}
+    <p>
+        {{ form.username.label }}
+        {{ form.username() }}
+    </p>
+    <p>
+        {{ form.password.label }}
+        {{ form.password }}
+    </p>
+    <p>
+        {{ form.remember_me() }}
+        {{ form.remember_me.label }}
+    </p>
+    <p>
+        {{ form.submit() }}
+    </p>
+</form>
+{% endblock %}
